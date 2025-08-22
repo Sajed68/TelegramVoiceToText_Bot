@@ -93,6 +93,11 @@ def main():
                     
                     send_message(chat_id, text)
                     print(f"user said: {text}")
+                    try:
+                        os.remove(ogg_file)
+                        os.remove(wav_file)
+                    except OSError:
+                        pass
         time.sleep(1)
         
     
